@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bljs08t4217n1"]
+
+[ext_resource type="PackedScene" uid="uid://cte7gcfhvygfi" path="res://models/props/crate.glb" id="1_okfsw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akvjt"]
+albedo_color = Color(0.382051, 0.306014, 0.162864, 0.294118)
+
+[node name="crate2" instance=ExtResource("1_okfsw")]
+
+[node name="crate" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_akvjt")

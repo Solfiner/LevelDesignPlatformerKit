@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://tse3mpfvqb85"]
+
+[ext_resource type="PackedScene" uid="uid://114t5yss0qt" path="res://models/prototyping/models/pipe-half.glb" id="1_0vjob"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_squuv"]
+albedo_color = Color(0.302819, 0.267752, 0.173142, 0.701961)
+
+[node name="pipe-half2" instance=ExtResource("1_0vjob")]
+
+[node name="pipe-half" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_squuv")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq3o06rhrx0t6"]
+
+[ext_resource type="PackedScene" uid="uid://cppammvyojl7" path="res://models/props/ladder-broken.glb" id="1_2x2ht"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4nti"]
+albedo_color = Color(0.54692, 0.434864, 0.382406, 0.898039)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ex2o0"]
+size = Vector3(0.493891, 0.967022, 0.121847)
+
+[node name="ladder-broken2" instance=ExtResource("1_2x2ht")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 0, 1.17441, 0)
+
+[node name="ladder-broken" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_d4nti")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, -2.86704e-12, -5.95041e-20, 2.86704e-12, 1, -2.86704e-12, -2.83756e-20, 2.86704e-12, 1, -0.0122716, 0.484772, -0.00441256)
+shape = SubResource("BoxShape3D_ex2o0")
