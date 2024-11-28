@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwvhgrcyestak"]
+[gd_scene load_steps=6 format=3 uid="uid://cwnuk0tjw7mck"]
 
-[ext_resource type="PackedScene" uid="uid://dmg3eddclu4p3" path="res://models/props/trap-spikes.glb" id="1_0ers7"]
-[ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="2_siud0"]
+[ext_resource type="PackedScene" uid="uid://dmg3eddclu4p3" path="res://models/props/trap-spikes.glb" id="1_pokcr"]
+[ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="2_8pfuo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnoan"]
 albedo_color = Color(0.301762, 0.161492, 0.0439986, 1)
@@ -13,7 +13,7 @@ metallic = 1.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_18e5l"]
 size = Vector3(0.75, 0.3, 0.75)
 
-[node name="trap-spikes" instance=ExtResource("1_0ers7")]
+[node name="trap-spikes" instance=ExtResource("1_pokcr")]
 
 [node name="trap-spikes" parent="." index="0"]
 material_override = SubResource("StandardMaterial3D_qnoan")
@@ -21,7 +21,7 @@ material_override = SubResource("StandardMaterial3D_qnoan")
 [node name="spikes" parent="trap-spikes" index="0"]
 material_override = SubResource("StandardMaterial3D_axvog")
 
-[node name="DamageDealerArea3D" parent="." index="2" instance=ExtResource("2_siud0")]
+[node name="DamageDealerArea3D" parent="." index="2" instance=ExtResource("2_8pfuo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 
 [node name="CollisionShape3D" parent="DamageDealerArea3D" index="0"]

@@ -1,15 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpo3dr26b06w3"]
+[gd_scene load_steps=7 format=3 uid="uid://dpo3dr26b06w3"]
 
 [ext_resource type="PackedScene" uid="uid://cl1l60sih7qo0" path="res://models/props/spike-block-wide.glb" id="1_5lq27"]
 [ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="2_lgsom"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="2_wl5mi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6dpl"]
+albedo_color = Color(0.798277, 0.838036, 0.943465, 0.972549)
+albedo_texture = ExtResource("2_wl5mi")
+metallic = 1.0
+uv1_offset = Vector3(1.06, 0, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_51hsx"]
-size = Vector3(2.5, 1, 1)
+size = Vector3(2.24902, 0.671875, 0.72168)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wdfqi"]
-size = Vector3(2, 0.75, 0.75)
+size = Vector3(2, 0.62793, 0.670898)
 
 [node name="spike-block-wide" instance=ExtResource("1_5lq27")]
+
+[node name="spike-block-wide" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_n6dpl")
 
 [node name="DamageDealerArea3D" parent="." index="1" instance=ExtResource("2_lgsom")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

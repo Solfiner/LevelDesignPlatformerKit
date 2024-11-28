@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ikhnhkkqet3v"
-path="res://.godot/imported/figurine-cube-detailed.glb-68c59cdbb912146169f9f0a342921008.scn"
+uid="uid://rcsite4ov8qv"
+path="res://.godot/imported/figurine.glb-9ea65f6e822ead792888ff8e0872f951.scn"
 
 [deps]
 
-source_file="res://models/prototyping/models/figurine-cube-detailed.glb"
-dest_files=["res://.godot/imported/figurine-cube-detailed.glb-68c59cdbb912146169f9f0a342921008.scn"]
+source_file="res://models/props/figurine.glb"
+dest_files=["res://.godot/imported/figurine.glb-9ea65f6e822ead792888ff8e0872f951.scn"]
 
 [params]
 

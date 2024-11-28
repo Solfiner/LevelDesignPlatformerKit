@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://3g3lpvt6brp3"]
+
+[ext_resource type="PackedScene" uid="uid://cqdmicia4gklj" path="res://models/props/platform-fortified.glb" id="1_vsafu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wfo7"]
+albedo_color = Color(0.355131, 0.282327, 0.184428, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7okew"]
+size = Vector3(0.990234, 0.203125, 1.05493)
+
+[node name="platform-fortified2" instance=ExtResource("1_vsafu")]
+
+[node name="platform-fortified" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_1wfo7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, -2.86704e-12, -5.95041e-20, 2.86704e-12, 1, -2.86704e-12, -2.83756e-20, 2.86704e-12, 1, -0.0122716, 0.108096, -0.00441256)
+shape = SubResource("BoxShape3D_7okew")

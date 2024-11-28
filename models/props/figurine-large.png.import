@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bawgqrjtydvlp"
-path="res://.godot/imported/figurine-large.png-c7f324a852101ecfe8d6f5467957f823.ctex"
+uid="uid://chvsxodtgj06v"
+path="res://.godot/imported/figurine-large.png-d33b21352850544903c8f6e9eda1cd01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/prototyping/models/figurine-large.png"
-dest_files=["res://.godot/imported/figurine-large.png-c7f324a852101ecfe8d6f5467957f823.ctex"]
+source_file="res://models/props/figurine-large.png"
+dest_files=["res://.godot/imported/figurine-large.png-d33b21352850544903c8f6e9eda1cd01.ctex"]
 
 [params]
 

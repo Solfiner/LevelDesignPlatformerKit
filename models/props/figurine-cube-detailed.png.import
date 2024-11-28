@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dksc161g3xmxu"
-path="res://.godot/imported/figurine.png-a510948abb58741addcedf080a390319.ctex"
+uid="uid://djd6v5gvtmku4"
+path="res://.godot/imported/figurine-cube-detailed.png-920190ccb50e4c17a69fff445f0d2963.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/prototyping/models/figurine.png"
-dest_files=["res://.godot/imported/figurine.png-a510948abb58741addcedf080a390319.ctex"]
+source_file="res://models/props/figurine-cube-detailed.png"
+dest_files=["res://.godot/imported/figurine-cube-detailed.png-920190ccb50e4c17a69fff445f0d2963.ctex"]
 
 [params]
 

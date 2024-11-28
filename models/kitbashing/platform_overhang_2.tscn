@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl6j10x80as1o"]
+
+[ext_resource type="PackedScene" uid="uid://dnbt3mrfvervy" path="res://models/props/platform-overhang.glb" id="1_gj27m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frpks"]
+albedo_color = Color(0.356863, 0.282353, 0.184314, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htrg8"]
+size = Vector3(0.990234, 0.276367, 1.08105)
+
+[node name="platform-overhang2" instance=ExtResource("1_gj27m")]
+
+[node name="platform-overhang" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_frpks")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.258671, -0.30501)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, -2.86704e-12, -5.95041e-20, 2.86704e-12, 1, -2.86704e-12, -2.83756e-20, 2.86704e-12, 1, -0.0122716, -0.00475863, 0.0156919)
+shape = SubResource("BoxShape3D_htrg8")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b622r8kn6dv82"]
+
+[ext_resource type="PackedScene" uid="uid://o03cclkqfdvo" path="res://models/props/door-large-open.glb" id="1_iuqls"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw445"]
+albedo_color = Color(0.650201, 0.35863, 0.206099, 1)
+proximity_fade_enabled = true
+proximity_fade_distance = 2.0
+distance_fade_mode = 2
+
+[node name="door-large-open2" instance=ExtResource("1_iuqls")]
+
+[node name="door-large-open" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_mw445")

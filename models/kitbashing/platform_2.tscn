@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1y2yh6tdodcw"]
+
+[ext_resource type="PackedScene" uid="uid://kxlanit681hg" path="res://models/props/platform.glb" id="1_84rvb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7tne"]
+albedo_color = Color(0.356863, 0.282353, 0.184314, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htrg8"]
+size = Vector3(0.990234, 0.276367, 1.08105)
+
+[node name="platform2" instance=ExtResource("1_84rvb")]
+
+[node name="platform" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_x7tne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, -2.86704e-12, -5.95041e-20, 2.86704e-12, 1, -2.86704e-12, -2.83756e-20, 2.86704e-12, 1, -0.00304814, 0.108096, -0.00441256)
+shape = SubResource("BoxShape3D_htrg8")

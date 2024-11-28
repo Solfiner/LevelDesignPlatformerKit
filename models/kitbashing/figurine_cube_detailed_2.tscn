@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbvkajihryk3b"]
+
+[ext_resource type="PackedScene" uid="uid://ueiyx4v3c7pt" path="res://models/props/figurine-cube-detailed.glb" id="1_0aavr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wg2b"]
+albedo_color = Color(0.689534, 0.390651, 0.348488, 1)
+metallic = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_54gvh"]
+size = Vector3(0.486572, 0.566849, 0.256027)
+
+[node name="figurine-cube-detailed2" instance=ExtResource("1_0aavr")]
+
+[node name="leg-left" parent="figurine-cube-detailed/root" index="0"]
+material_override = SubResource("StandardMaterial3D_4wg2b")
+
+[node name="leg-right" parent="figurine-cube-detailed/root" index="1"]
+material_override = SubResource("StandardMaterial3D_4wg2b")
+
+[node name="torso" parent="figurine-cube-detailed/root" index="2"]
+material_override = SubResource("StandardMaterial3D_4wg2b")
+
+[node name="arm-left" parent="figurine-cube-detailed/root/torso" index="0"]
+material_override = SubResource("StandardMaterial3D_4wg2b")
+
+[node name="arm-right" parent="figurine-cube-detailed/root/torso" index="1"]
+material_override = SubResource("StandardMaterial3D_4wg2b")
+
+[node name="head" parent="figurine-cube-detailed/root/torso" index="2"]
+material_override = SubResource("StandardMaterial3D_4wg2b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00427246, 0.311928, 0.0315323)
+shape = SubResource("BoxShape3D_54gvh")

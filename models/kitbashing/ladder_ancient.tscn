@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://k2hh5loe6iqg"]
+
+[ext_resource type="PackedScene" uid="uid://b87snreold7v2" path="res://models/props/ladder-long.glb" id="1_nlpoj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1dov"]
+albedo_color = Color(0.545098, 0.435294, 0.384314, 0.898039)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uyj48"]
+size = Vector3(0.493891, 2.0039, 0.121847)
+
+[node name="ladder-long2" instance=ExtResource("1_nlpoj")]
+transform = Transform3D(9.477e-15, -2.16808e-07, 4.96, -4.96, -2.16808e-07, 0, 2.16808e-07, -4.96, -2.16808e-07, 0, 0, 0)
+
+[node name="ladder-long" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_m1dov")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, -2.86704e-12, -5.95041e-20, 2.86704e-12, 1, -2.86704e-12, -2.81638e-20, 2.86704e-12, 1, -0.0122716, 1.00321, -0.00441256)
+shape = SubResource("BoxShape3D_uyj48")
