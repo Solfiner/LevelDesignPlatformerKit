@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cqdmicia4gklj" path="res://models/props/platform-fortified.glb" id="1_vsafu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wfo7"]
-albedo_color = Color(0.355131, 0.282327, 0.184428, 1)
+albedo_color = Color(0.429714, 0.293338, 0.142542, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7okew"]
 size = Vector3(0.990234, 0.203125, 1.05493)

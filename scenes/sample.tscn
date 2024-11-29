@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://e6jwbml72r4o"]
+[gd_scene load_steps=37 format=3 uid="uid://e6jwbml72r4o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_apxki"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_hgw2l"]
@@ -9,15 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://c8up71en5djgm" path="res://objects/platform_falling.tscn" id="14_psvef"]
 [ext_resource type="PackedScene" uid="uid://bsnj0gkonshon" path="res://models/kitbashing/block_grass_long_2.tscn" id="15_7dowh"]
 [ext_resource type="PackedScene" uid="uid://bl6j10x80as1o" path="res://models/kitbashing/platform_overhang_2.tscn" id="15_x6tnq"]
+[ext_resource type="PackedScene" uid="uid://bs65o07otxbmm" path="res://objects/moving_object_path_3d.tscn" id="15_xxd3p"]
+[ext_resource type="PackedScene" uid="uid://byr86y8mf3xa8" path="res://models/kitbashing/chestgate.tscn" id="16_of2o1"]
 [ext_resource type="PackedScene" uid="uid://e47tj2283ui0" path="res://models/kitbashing/block_grass_large_tall_2.tscn" id="16_qyhad"]
 [ext_resource type="PackedScene" uid="uid://bwselu6j2hpit" path="res://models/kitbashing/old_crate.tscn" id="18_nogbd"]
 [ext_resource type="PackedScene" uid="uid://cxea8lmw7cy1l" path="res://objects/player_kill_volume.tscn" id="20_iwq7o"]
 [ext_resource type="PackedScene" uid="uid://dpo3dr26b06w3" path="res://objects/spike_block_wide.tscn" id="21_37vx0"]
-[ext_resource type="PackedScene" uid="uid://cphvj3l6e7ddt" path="res://models/props/chest.glb" id="21_jv2wr"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="22_1dx8f"]
 [ext_resource type="PackedScene" uid="uid://b622r8kn6dv82" path="res://models/kitbashing/door_large_open_2.tscn" id="22_o5ugc"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_324j0"]
+[ext_resource type="PackedScene" uid="uid://capc251apkkb8" path="res://models/kitbashing/templeblock.tscn" id="23_nnkoh"]
 [ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_6hsja"]
+[ext_resource type="PackedScene" uid="uid://3g3lpvt6brp3" path="res://models/kitbashing/platform_fortified_2.tscn" id="25_pl8wf"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="25_vfu23"]
 [ext_resource type="PackedScene" uid="uid://c1y2yh6tdodcw" path="res://models/kitbashing/platform_2.tscn" id="26_bl1vk"]
 [ext_resource type="Theme" uid="uid://d3avl0mr4r87l" path="res://themes/default_theme.tres" id="26_xw2uw"]
@@ -26,6 +29,55 @@
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
 auto_exposure_scale = 0.75
 dof_blur_far_distance = 0.01
+
+[sub_resource type="Curve3D" id="Curve3D_rcily"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 50.9035, 0.9, 16.109, 0, 0, 0, 0, 0, 0, 50.904, 0.9, 13.023),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_fxfgn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 12.7317, 0.9, -71.308, 0, 0, 0, 0, 0, 0, 15.5826, 0.9, -71.308),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_uhb23"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.0974, -0.131812, -83.3798, 0, 0, 0, 0, 0, 0, 14.097, 2.07, -83.38),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_jqg8h"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 18.2328, 1.01181, -91.2731, 0, 0, 0, 0, 0, 0, 10.1824, 1.012, -91.273),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_kxayj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 18.2328, 1.01181, -96.0682, 0, 0, 0, 0, 0, 0, 10.1824, 1.012, -96.0681),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_e4gpu"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 10.182, 1.012, -93.603, 0, 0, 0, 0, 0, 0, 18.233, 1.012, -93.603),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_nxln4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.2054, 0, -107.182, 0, 0, 0, 0, 0, 0, 14.1171, 0, -112.448),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_ri8jt"]
 font = ExtResource("25_vfu23")
@@ -55,7 +107,7 @@ environment = ExtResource("1_apxki")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_hgw2l")]
-transform = Transform3D(-0.999523, 0, -0.0308874, 0, 1, 0, 0.0308874, 0, -0.999523, -0.477883, 1.86931, 15.3878)
+transform = Transform3D(-0.999523, 0, -0.0308874, 0, 1, 0, 0.0308874, 0, -0.999523, -0.637337, 1.52883, 13.7913)
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -176,33 +228,6 @@ transform = Transform3D(2.015, 0, 0, 0, 2.015, 0, 0, 0, 2.015, -0.534819, -0.149
 
 [node name="temple2" type="Node3D" parent="World"]
 
-[node name="crate-item2" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 13.0028, -0.412154, -37.6277)
-
-[node name="crate-item3" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 14.3472, -0.412154, -37.6277)
-
-[node name="crate-item4" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 15.6757, -0.412154, -37.6277)
-
-[node name="crate-item5" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 13.0028, -0.412154, -38.9941)
-
-[node name="crate-item6" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 14.3472, -0.412154, -38.9941)
-
-[node name="crate-item7" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 15.6757, -0.412154, -38.9941)
-
-[node name="crate-item8" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 13.0028, -0.412154, -40.3903)
-
-[node name="crate-item9" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 14.3472, -0.412154, -40.3903)
-
-[node name="crate-item10" parent="World/temple2" instance=ExtResource("18_nogbd")]
-transform = Transform3D(2.86, 0, 0, 0, 2.86, 0, 0, 0, 2.86, 15.6757, -0.412154, -40.3903)
-
 [node name="checkpoint" parent="World/temple2" instance=ExtResource("8_2hshe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3434, 0.836671, -39.048)
 activated_color = Color(0.104145, 0.601276, 0.875484, 1)
@@ -242,6 +267,9 @@ transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2925, 0.430808
 
 [node name="platform12" parent="World/temple2" instance=ExtResource("26_bl1vk")]
 transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2925, 0.430808, -35.5718)
+
+[node name="block-grass-long2" parent="World/temple2" instance=ExtResource("15_7dowh")]
+transform = Transform3D(2.125, 0, 0, 0, 1.207, 0, 0, 0, 3.894, 14.3195, -0.134345, -39.0533)
 
 [node name="temple3" type="Node3D" parent="World"]
 
@@ -293,19 +321,296 @@ transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 14.2791, -0.0529279, -50.8
 [node name="spike-block-wide6" parent="World/temple3" instance=ExtResource("21_37vx0")]
 transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 14.2791, -0.0529279, -56.6026)
 
-[node name="templegate" type="Node3D" parent="World"]
+[node name="temple_gate1" type="Node3D" parent="World"]
 
-[node name="chest2" parent="World/templegate" instance=ExtResource("21_jv2wr")]
-transform = Transform3D(-2.21835e-07, -5.075, 0, 5.075, -2.21835e-07, 0, 0, 0, 5.075, -1.87113, 1.71431, -17.0602)
-
-[node name="chest3" parent="World/templegate" instance=ExtResource("21_jv2wr")]
-transform = Transform3D(-2.21835e-07, 5.075, 0, -5.075, -2.21835e-07, 0, 0, 0, 5.075, 0.929751, 1.71431, -17.0602)
-
-[node name="door-large-open3" parent="World/templegate" instance=ExtResource("22_o5ugc")]
+[node name="door-large-open3" parent="World/temple_gate1" instance=ExtResource("22_o5ugc")]
 transform = Transform3D(3.88, 0, 0, 0, 3.88, 0, 0, 0, 3.88, -0.467726, 0.809, -16.783)
 
-[node name="door-large-open4" parent="World/templegate" instance=ExtResource("22_o5ugc")]
+[node name="door-large-open4" parent="World/temple_gate1" instance=ExtResource("22_o5ugc")]
 transform = Transform3D(4.7, 0, 0, 0, 4.7, 0, 0, 0, 4.7, -0.467726, 0.809, -16.988)
+
+[node name="chest4" parent="World/temple_gate1" instance=ExtResource("16_of2o1")]
+transform = Transform3D(-2.21835e-07, -5.075, 0, 5.075, -2.21835e-07, 0, 0, 0, 5.075, -1.871, 1.714, -17.06)
+
+[node name="chest5" parent="World/temple_gate1" instance=ExtResource("16_of2o1")]
+transform = Transform3D(-2.21835e-07, 5.075, 0, -5.075, -2.21835e-07, 0, 0, 0, 5.075, 0.93, 1.714, -17.06)
+
+[node name="temple_underside1" type="Node3D" parent="World"]
+
+[node name="block-snow-large2" parent="World/temple_underside1" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.30041e-07, 0, 0.295, 0, 1, 0, -2.975, 0, -1.28949e-08, 1.21731, -0.545248, -20.5351)
+
+[node name="block-snow-large6" parent="World/temple_underside1" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(2.975, 0, 0, 0, 1, 0, 0, 0, 0.295, 4.17827, -0.545248, -23.5361)
+
+[node name="block-snow-large5" parent="World/temple_underside1" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-2.12e-07, 0, 0.295, 0, 1, 0, -4.85, 0, -1.28949e-08, 12.4452, -0.545248, -32.2429)
+
+[node name="block-snow-large7" parent="World/temple_underside1" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 18.8333, -0.149737, -31.5392)
+
+[node name="block-snow-large3" parent="World/temple_underside1" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.30041e-07, 0, 0.295, 0, 1, 0, -2.975, 0, -1.28949e-08, -2.21567, -0.545248, -20.5351)
+
+[node name="block-snow-large4" parent="World/temple_underside1" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(6.885, 0, 0, 0, 1, 0, 0, 0, 0.295, 5.419, -0.545248, -27.2433)
+
+[node name="block-grass-long2" parent="World/temple_underside1" instance=ExtResource("15_7dowh")]
+transform = Transform3D(-2.22272e-07, 0, 3.53, 0, 8.825, 0, -5.085, 0, -1.54301e-07, -0.364913, -8.32915, -18.0993)
+
+[node name="crate-item2" parent="World/temple_underside1" instance=ExtResource("18_nogbd")]
+transform = Transform3D(10.27, 0, 0, 0, 1, 0, 0, 0, 5.62, 3.8229, 0.183751, -25.329)
+
+[node name="crate-item3" parent="World/temple_underside1" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -26.9688)
+
+[node name="crate-item5" parent="World/temple_underside1" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-8.13688e-07, 0, 5.62, 0, 1, 0, -18.615, 0, -2.45658e-07, 14.2802, 0.183751, -32.1052)
+
+[node name="crate-item4" parent="World/temple_underside1" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-5.43333e-07, 0, 5.62, 0, 1, 0, -12.43, 0, -2.45658e-07, 17.0799, 0.183751, -31.5268)
+
+[node name="temple4" type="Node3D" parent="World"]
+
+[node name="platform6" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -61.0555)
+
+[node name="platform7" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -63.7615)
+
+[node name="crate-item3" parent="World/temple4" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -62.3765)
+
+[node name="platform8" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -65.1389)
+
+[node name="platform9" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -67.8449)
+
+[node name="crate-item4" parent="World/temple4" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -66.4598)
+
+[node name="platform10" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -69.1933)
+
+[node name="platform11" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -71.8993)
+
+[node name="crate-item5" parent="World/temple4" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -70.5142)
+
+[node name="platform12" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -73.2766)
+
+[node name="platform13" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -75.9826)
+
+[node name="platform14" parent="World/temple4" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547, -78.6977)
+
+[node name="crate-item6" parent="World/temple4" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -74.5976)
+
+[node name="ladder-broken3" parent="World/temple4" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 16.0747, 1.65683, -60.1992)
+
+[node name="block-snow-large7" parent="World/temple4" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 16.0057, -0.149737, -62.6893)
+
+[node name="ladder-broken8" parent="World/temple4" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 12.5641, 1.65683, -72.7974)
+
+[node name="block-snow-large12" parent="World/temple4" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 12.4951, -0.149737, -75.2875)
+
+[node name="ladder-broken4" parent="World/temple4" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 12.6285, 1.65683, -63.9626)
+
+[node name="block-snow-large8" parent="World/temple4" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 12.5595, -0.149737, -66.4526)
+
+[node name="ladder-broken5" parent="World/temple4" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 12.6285, 1.65683, -60.1596)
+
+[node name="block-snow-large9" parent="World/temple4" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 12.5595, -0.149737, -62.6496)
+
+[node name="ladder-broken6" parent="World/temple4" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 16.0914, 1.65683, -72.8169)
+
+[node name="block-snow-large10" parent="World/temple4" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 16.0225, -0.149737, -75.3069)
+
+[node name="ladder-broken7" parent="World/temple4" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 16.0914, 1.65683, -69.0138)
+
+[node name="block-snow-large11" parent="World/temple4" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 16.0225, -0.149737, -71.5039)
+
+[node name="spike-block-wide2" parent="World/temple4" instance=ExtResource("21_37vx0")]
+transform = Transform3D(-5.7699e-08, 0, 1, 0, 1, 0, -1.32, 0, -4.37114e-08, 16.082, 0.804684, -67.1942)
+
+[node name="moving_object_path" parent="World/temple4" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+transform = Transform3D(-5.7699e-08, 0, 1, 0, 1, 0, -1.32, 0, -4.37114e-08, 0, 0, 0)
+curve = SubResource("Curve3D_rcily")
+object_to_move = NodePath("../spike-block-wide2")
+ping_pong = true
+
+[node name="spike-block-wide3" parent="World/temple4" instance=ExtResource("21_37vx0")]
+transform = Transform3D(-5.7699e-08, 0, 1, 0, 1, 0, -1.32, 0, -4.37114e-08, 12.7376, 0.804684, -71.2566)
+
+[node name="moving_object_path2" parent="World/temple4" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+curve = SubResource("Curve3D_fxfgn")
+object_to_move = NodePath("../spike-block-wide3")
+ping_pong = true
+
+[node name="checkpoint" parent="World/temple4" instance=ExtResource("8_2hshe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3454, 1.11705, -75.8932)
+activated_color = Color(0.105882, 0.6, 0.87451, 1)
+
+[node name="temple5" type="Node3D" parent="World"]
+
+[node name="platform-falling12" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -81.5558)
+respawn_delay = 0.6
+
+[node name="platform-falling15" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -85.2025)
+respawn_delay = 0.6
+
+[node name="platform-falling16" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -88.6929)
+respawn_delay = 0.6
+
+[node name="platform-falling13" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8161, 0.279086, -83.3753)
+respawn_delay = 0.6
+
+[node name="platform-falling14" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7171, 0.279086, -83.4123)
+respawn_delay = 0.6
+
+[node name="spike-block-wide6" parent="World/temple5" instance=ExtResource("21_37vx0")]
+transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 14.2791, 0.13061, -83.368)
+
+[node name="moving_object_path" parent="World/temple5" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+curve = SubResource("Curve3D_uhb23")
+object_to_move = NodePath("../spike-block-wide6")
+ping_pong = true
+
+[node name="spike-block-wide7" parent="World/temple5" instance=ExtResource("21_37vx0")]
+transform = Transform3D(1.01, 0, 0, 0, 1, 0, 0, 0, 1, 14.2791, 0.13061, -86.9575)
+
+[node name="platform-falling17" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -91.1502)
+respawn_delay = 0.6
+
+[node name="platform-falling18" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6934, 0.279086, -91.1502)
+respawn_delay = 0.6
+
+[node name="platform-falling19" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8069, 0.279086, -91.1502)
+respawn_delay = 0.6
+
+[node name="platform-falling20" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -93.6362)
+respawn_delay = 0.6
+
+[node name="platform-falling21" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6934, 0.279086, -93.6362)
+respawn_delay = 0.6
+
+[node name="platform-falling22" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8069, 0.279086, -93.6362)
+respawn_delay = 0.6
+
+[node name="platform-falling23" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -96.132)
+respawn_delay = 0.6
+
+[node name="platform-falling24" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6934, 0.279086, -96.132)
+respawn_delay = 0.6
+
+[node name="platform-falling25" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8069, 0.279086, -96.132)
+respawn_delay = 0.6
+
+[node name="platform-falling26" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -96.132)
+respawn_delay = 0.6
+
+[node name="platform-falling27" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6934, 0.279086, -96.132)
+respawn_delay = 0.6
+
+[node name="platform-falling28" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8069, 0.279086, -96.132)
+respawn_delay = 0.6
+
+[node name="platform-falling29" parent="World/temple5" instance=ExtResource("14_psvef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2692, 0.279086, -98.5554)
+respawn_delay = 0.6
+
+[node name="spike-block-wide2" parent="World/temple5" instance=ExtResource("21_37vx0")]
+transform = Transform3D(-3.80289e-08, 0, 1, 0, 1, 0, -0.87, 0, -4.37114e-08, 18.2471, 0.804684, -91.2766)
+
+[node name="moving_object_path2" parent="World/temple5" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+curve = SubResource("Curve3D_jqg8h")
+object_to_move = NodePath("../spike-block-wide2")
+movement_speed = 2.5
+ping_pong = true
+
+[node name="spike-block-wide3" parent="World/temple5" instance=ExtResource("21_37vx0")]
+transform = Transform3D(-3.80289e-08, 0, 1, 0, 1, 0, -0.87, 0, -4.37114e-08, 18.2471, 0.804684, -96.0726)
+
+[node name="moving_object_path3" parent="World/temple5" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+curve = SubResource("Curve3D_kxayj")
+object_to_move = NodePath("../spike-block-wide3")
+movement_speed = 2.5
+ping_pong = true
+
+[node name="spike-block-wide4" parent="World/temple5" instance=ExtResource("21_37vx0")]
+transform = Transform3D(-3.80289e-08, 0, 1, 0, 1, 0, -0.87, 0, -4.37114e-08, 10.2614, 0.804684, -93.6887)
+
+[node name="moving_object_path4" parent="World/temple5" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+curve = SubResource("Curve3D_e4gpu")
+object_to_move = NodePath("../spike-block-wide4")
+movement_speed = 2.5
+ping_pong = true
+
+[node name="temple6" type="Node3D" parent="World"]
+
+[node name="ladder-broken2" parent="World/temple6" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 15.988, 1.17441, -100.008)
+
+[node name="ladder-broken3" parent="World/temple6" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 12.5414, 1.17441, -100.127)
+
+[node name="platform6" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.00297061, -101.368)
+
+[node name="platform7" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.00297061, -104.074)
+
+[node name="crate-item5" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, -0.253041, -102.682)
+
+[node name="block-snow-large10" parent="World/temple6" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 16.0225, -0.495824, -102.596)
+
+[node name="block-snow-large11" parent="World/temple6" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 12.5195, -0.495824, -102.596)
+
+[node name="platform-fortified2" parent="World/temple6" instance=ExtResource("25_pl8wf")]
+transform = Transform3D(2.715, 0, 0, 0, 2.715, 0, 0, 0, 2.715, 14.2004, -0.153525, -107.25)
+
+[node name="moving_object_path" parent="World/temple6" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
+curve = SubResource("Curve3D_nxln4")
+object_to_move = NodePath("../platform-fortified2")
+ping_pong = true
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
