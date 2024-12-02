@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_324j0"]
 [ext_resource type="PackedScene" uid="uid://capc251apkkb8" path="res://models/kitbashing/templeblock.tscn" id="23_nnkoh"]
 [ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_6hsja"]
-[ext_resource type="PackedScene" uid="uid://3g3lpvt6brp3" path="res://models/kitbashing/platform_fortified_2.tscn" id="25_pl8wf"]
+[ext_resource type="PackedScene" uid="uid://bpharv43ulngb" path="res://objects/platform_moving.tscn" id="25_ul5lr"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="25_vfu23"]
 [ext_resource type="PackedScene" uid="uid://c1y2yh6tdodcw" path="res://models/kitbashing/platform_2.tscn" id="26_bl1vk"]
 [ext_resource type="Theme" uid="uid://d3avl0mr4r87l" path="res://themes/default_theme.tres" id="26_xw2uw"]
@@ -72,9 +72,9 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_nxln4"]
+[sub_resource type="Curve3D" id="Curve3D_80bnc"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.2054, 0, -107.182, 0, 0, 0, 0, 0, 0, 14.1171, 0, -112.448),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 14.2244, 0, -106.84, 0, 0, 0, 0, 0, 0, 14.2244, 0, -114.662),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -107,7 +107,7 @@ environment = ExtResource("1_apxki")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_hgw2l")]
-transform = Transform3D(-0.999523, 0, -0.0308874, 0, 1, 0, 0.0308874, 0, -0.999523, -0.637337, 1.52883, 13.7913)
+transform = Transform3D(-0.999523, 0, -0.0308874, 0, 1, 0, 0.0308874, 0, -0.999523, 14.3223, 4.29616, -102.514)
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -411,6 +411,9 @@ transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.438547
 [node name="crate-item6" parent="World/temple4" instance=ExtResource("18_nogbd")]
 transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -74.5976)
 
+[node name="crate-item7" parent="World/temple4" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-4.48916e-07, 0, 5.62, 0, 1, 0, -10.27, 0, -2.45658e-07, 14.2802, 0.183751, -77.4029)
+
 [node name="ladder-broken3" parent="World/temple4" instance=ExtResource("12_yfsc0")]
 transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 16.0747, 1.65683, -60.1992)
 
@@ -604,13 +607,84 @@ transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08,
 [node name="block-snow-large11" parent="World/temple6" instance=ExtResource("23_nnkoh")]
 transform = Transform3D(-1.272e-07, 0, 0.295, 0, 0.7, 0, -2.91, 0, -1.28949e-08, 12.5195, -0.495824, -102.596)
 
-[node name="platform-fortified2" parent="World/temple6" instance=ExtResource("25_pl8wf")]
-transform = Transform3D(2.715, 0, 0, 0, 2.715, 0, 0, 0, 2.715, 14.2004, -0.153525, -107.25)
+[node name="platform-moving" parent="World/temple6" instance=ExtResource("25_ul5lr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2451, 0.017432, -106.922)
 
 [node name="moving_object_path" parent="World/temple6" node_paths=PackedStringArray("object_to_move") instance=ExtResource("15_xxd3p")]
-curve = SubResource("Curve3D_nxln4")
-object_to_move = NodePath("../platform-fortified2")
+curve = SubResource("Curve3D_80bnc")
+object_to_move = NodePath("../platform-moving")
+movement_speed = 2.0
 ping_pong = true
+
+[node name="platform8" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, -2.19964, -107.032)
+
+[node name="platform9" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, -2.19964, -109.738)
+
+[node name="platform10" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, -2.19964, -111.79)
+
+[node name="platform11" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, -2.19964, -114.496)
+
+[node name="crate-item6" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(-9.0417e-07, 0, 5.62, 0, 1, 0, -20.685, 0, -2.45658e-07, 14.2802, -2.68213, -110.689)
+
+[node name="crate-item2" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(5.7, 0, 0, 0, 5.7, 0, 0, 0, 5.7, 14.2917, -2.89829, -104.231)
+
+[node name="crate-item3" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(4.325, 0, 0, 0, 4.325, 0, 0, 0, 4.325, 16.6761, -2.75805, -106.523)
+
+[node name="crate-item7" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(1.73, 0, 0, 0, 1.73, 0, 0, 0, 1.73, 16.0827, -1.37793, -104.827)
+
+[node name="platform12" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.01, 0, 0, 0, 2.01, 0, 0, 0, 2.01, 16.6895, -0.760482, -106.503)
+
+[node name="crate-item4" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(3.36, 0, 0, 0, 3.36, 0, 0, 0, 3.36, 16.5338, -2.97678, -108.411)
+
+[node name="platform13" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(1.515, 0, 0, 0, 1.515, 0, 0, 0, 1.515, 16.5409, -1.39342, -108.43)
+
+[node name="ladder-broken4" parent="World/temple6" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 15.988, -0.807607, -110.055)
+
+[node name="block-snow-large12" parent="World/temple6" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.36161e-07, 0, 0.295, 0, 0.7, 0, -3.115, 0, -1.28949e-08, 16.0225, -2.65384, -112.488)
+
+[node name="ladder-broken5" parent="World/temple6" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 12.5258, -0.807606, -106.031)
+
+[node name="block-snow-large13" parent="World/temple6" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.16491e-07, 0, 0.295, 0, 0.7, 0, -2.665, 0, -1.28949e-08, 12.6549, -2.62948, -108.429)
+
+[node name="crate-item8" parent="World/temple6" instance=ExtResource("18_nogbd")]
+transform = Transform3D(5.7, 0, 0, 0, 5.7, 0, 0, 0, 5.7, 14.2917, -2.89829, -117.292)
+
+[node name="platform14" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.00297061, -117.32)
+
+[node name="platform15" parent="World/temple6" instance=ExtResource("26_bl1vk")]
+transform = Transform3D(2.755, 0, 0, 0, 2.755, 0, 0, 0, 2.755, 14.2775, 0.00297061, -120.026)
+
+[node name="checkpoint" parent="World/temple6" instance=ExtResource("8_2hshe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2142, 0.449217, -118.652)
+activated_color = Color(0.105882, 0.6, 0.87451, 1)
+
+[node name="ladder-broken6" parent="World/temple6" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 12.6237, 1.1193, -116.139)
+
+[node name="block-snow-large14" parent="World/temple6" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.16491e-07, 0, 0.295, 0, 0.7, 0, -2.665, 0, -1.28949e-08, 12.6549, -0.796844, -118.653)
+
+[node name="ladder-broken7" parent="World/temple6" instance=ExtResource("12_yfsc0")]
+transform = Transform3D(9.48655e-15, -2.17027e-07, 4.965, -4.965, -2.17027e-07, 0, 2.17027e-07, -4.965, -2.17027e-07, 16.0098, 1.1193, -116.139)
+
+[node name="block-snow-large15" parent="World/temple6" instance=ExtResource("23_nnkoh")]
+transform = Transform3D(-1.16491e-07, 0, 0.295, 0, 0.7, 0, -2.665, 0, -1.28949e-08, 16.0163, -0.796844, -118.653)
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

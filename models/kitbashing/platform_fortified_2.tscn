@@ -9,6 +9,7 @@ albedo_color = Color(0.429714, 0.293338, 0.142542, 1)
 size = Vector3(0.990234, 0.203125, 1.05493)
 
 [node name="platform-fortified2" instance=ExtResource("1_vsafu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="platform-fortified" parent="." index="0"]
 material_override = SubResource("StandardMaterial3D_1wfo7")

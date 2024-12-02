@@ -9,7 +9,7 @@ uv1_scale = Vector3(1.03, 1.03, 1.03)
 uv2_scale = Vector3(2.21, 2.21, 2.21)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qih5w"]
-size = Vector3(0.494507, 0.355713, 0.611572)
+size = Vector3(1.86914, 1.00977, 2.06812)
 
 [node name="block-snow-large2" instance=ExtResource("1_1a46h")]
 
