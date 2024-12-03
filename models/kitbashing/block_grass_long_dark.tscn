@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq8plgplwodbb"]
+
+[ext_resource type="PackedScene" uid="uid://caoqmoox7uqm7" path="res://models/props/block-grass-long.glb" id="1_cuhfk"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="2_upsxy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3b5x"]
+albedo_texture = ExtResource("2_upsxy")
+uv1_scale = Vector3(20.64, -0.015, 0.395)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_01ut3"]
+size = Vector3(1.92871, 1.00079, 1)
+
+[node name="block-grass-long2" instance=ExtResource("1_cuhfk")]
+
+[node name="block-grass-long" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_n3b5x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.498568, 0)
+shape = SubResource("BoxShape3D_01ut3")
