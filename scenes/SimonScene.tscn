@@ -195,7 +195,7 @@ environment = ExtResource("1_apxki")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_hgw2l")]
-transform = Transform3D(-0.999523, 0, -0.0308874, 0, 1, 0, 0.0308874, 0, -0.999523, 6.28981, 1.11864, -219.343)
+transform = Transform3D(-0.999523, 0, -0.0308874, 0, 1, 0, 0.0308874, 0, -0.999523, -0.373706, 1.11864, 13.0151)
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -1594,10 +1594,6 @@ respawn_delay = 0.6
 
 [node name="platform-falling67" parent="World/temple11" instance=ExtResource("14_psvef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30666, -0.615984, -240.922)
-respawn_delay = 0.6
-
-[node name="platform-falling68" parent="World/temple11" instance=ExtResource("14_psvef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.30666, -0.615984, -243.602)
 respawn_delay = 0.6
 
 [node name="spike-block-wide10" parent="World/temple11" instance=ExtResource("21_37vx0")]
