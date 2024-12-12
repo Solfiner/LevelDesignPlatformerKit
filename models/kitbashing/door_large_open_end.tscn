@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3uwedem5twyk"]
+
+[ext_resource type="PackedScene" uid="uid://o03cclkqfdvo" path="res://models/props/door-large-open.glb" id="1_ctwe7"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="2_uvb6x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gx4h4"]
+albedo_color = Color(0.545098, 0.435294, 0.384314, 0.898039)
+albedo_texture = ExtResource("2_uvb6x")
+uv1_scale = Vector3(11.68, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jh35u"]
+size = Vector3(0.204102, 0.753174, 0.303497)
+
+[node name="door-large-open2" instance=ExtResource("1_ctwe7")]
+
+[node name="door-large-open" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gx4h4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.397949, 0.369995, 0.0091095)
+shape = SubResource("BoxShape3D_jh35u")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.396536, 0.369995, 0.0091095)
+shape = SubResource("BoxShape3D_jh35u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.0114225, 0.975638, 0.0091095)
+shape = SubResource("BoxShape3D_jh35u")
