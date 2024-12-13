@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7x5ncwsdx6g2"]
+
+[ext_resource type="PackedScene" uid="uid://ci34piuq00fwk" path="res://models/props/block-grass-corner.glb" id="1_vbuck"]
+[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="2_40dh6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpxj2"]
+albedo_texture = ExtResource("2_40dh6")
+uv1_scale = Vector3(17.595, -0.015, 0.395)
+uv1_offset = Vector3(-0.135, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_11e67"]
+size = Vector3(0.984253, 1.00803, 1)
+
+[node name="block-grass-corner2" instance=ExtResource("1_vbuck")]
+
+[node name="block-grass-corner" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cpxj2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00787354, 0.502652, 0)
+shape = SubResource("BoxShape3D_11e67")
