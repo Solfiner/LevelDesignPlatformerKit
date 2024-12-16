@@ -18,3 +18,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.has_method("touched_goal") and !touched:
 		touched = true
 		body.touched_goal()
+		

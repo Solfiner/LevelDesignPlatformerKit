@@ -45,6 +45,7 @@ func _on_coin_collected(coins):
 	coins_label.text = str(coins)
 
 func _on_player_reached_goal() -> void:
+	Audio.play ("res://sounds/zapsplat_multimedia_game_sound_bright_sparkle_twinkle_tone_positive_award_achievement_002_40544.mp3")
 	original_blur = environment.camera_attributes.get("dof_blur_far_enabled")
 	original_blur_distance = environment.camera_attributes.get("dof_blur_far_distance")
 	original_blur_amount = environment.camera_attributes.get("dof_blur_amount")

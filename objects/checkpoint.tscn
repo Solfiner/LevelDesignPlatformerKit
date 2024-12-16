@@ -31,6 +31,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0)
 [node name="jewel" parent="mesh_offset/jewel" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_7onid")
 
+[node name="OmniLight3D5" type="OmniLight3D" parent="mesh_offset/jewel"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0128658, 0.421768, 0.0620935)
+light_color = Color(0.979484, 0.508648, 0.718519, 1)
+light_energy = 0.584
+light_size = 1.0
+light_specular = 0.195
+
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 collision_mask = 2

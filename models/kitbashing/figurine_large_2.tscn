@@ -12,13 +12,18 @@ size = Vector3(0.751511, 0.930875, 0.256027)
 
 [node name="figurine-large2" instance=ExtResource("1_mud2s")]
 
-[node name="leg-left" parent="figurine-large/root" index="0"]
+[node name="DitherObstacle" parent="figurine-large/root" index="0" instance=ExtResource("2_8fr10")]
+visibility_parent = NodePath("../leg-left")
+min_distance_dither = 1.0
+max_distance_dither = 2.0
+
+[node name="leg-left" parent="figurine-large/root" index="1"]
 material_override = SubResource("StandardMaterial3D_6wpdm")
 
-[node name="leg-right" parent="figurine-large/root" index="1"]
+[node name="leg-right" parent="figurine-large/root" index="2"]
 material_override = SubResource("StandardMaterial3D_6wpdm")
 
-[node name="torso" parent="figurine-large/root" index="2"]
+[node name="torso" parent="figurine-large/root" index="3"]
 material_override = SubResource("StandardMaterial3D_6wpdm")
 
 [node name="arm-left" parent="figurine-large/root/torso" index="0"]
@@ -30,23 +35,19 @@ material_override = SubResource("StandardMaterial3D_6wpdm")
 [node name="head" parent="figurine-large/root/torso" index="2"]
 material_override = SubResource("StandardMaterial3D_6wpdm")
 
+[node name="DitherObstacle2" parent="figurine-large/root/torso" index="3" instance=ExtResource("2_8fr10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+visibility_parent = NodePath("../../leg-right")
+min_distance_dither = 1.0
+max_distance_dither = 2.0
+
+[node name="DitherObstacle3" parent="figurine-large/root" index="4" instance=ExtResource("2_8fr10")]
+visibility_parent = NodePath("../torso")
+min_distance_dither = 1.0
+max_distance_dither = 2.0
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00588964, 0.462954, 0.0303143)
 shape = SubResource("BoxShape3D_ye2r2")
-
-[node name="DitherObstacle" parent="StaticBody3D" index="1" instance=ExtResource("2_8fr10")]
-visibility_parent = NodePath("../../figurine-large/root/leg-left")
-min_distance_dither = 1.0
-max_distance_dither = 2.0
-
-[node name="DitherObstacle2" parent="StaticBody3D" index="2" instance=ExtResource("2_8fr10")]
-visibility_parent = NodePath("../../figurine-large/root/leg-right")
-min_distance_dither = 1.0
-max_distance_dither = 2.0
-
-[node name="DitherObstacle3" parent="StaticBody3D" index="3" instance=ExtResource("2_8fr10")]
-visibility_parent = NodePath("../../figurine-large/root/torso")
-min_distance_dither = 1.0
-max_distance_dither = 2.0

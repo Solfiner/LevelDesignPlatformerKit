@@ -7,6 +7,7 @@ var original_pos : Vector3
 @onready var jewel_mesh: MeshInstance3D = $mesh_offset/jewel/jewel
 var time := 0.0
 var touched : bool
+var sound_has_played = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,19 +27,26 @@ func _process(delta):
 	if touched:
 		jewel_container.position = lerp(jewel_container.position,Vector3.ZERO,delta*2)
 		jewel_container.scale = lerp(jewel_container.scale, Vector3.ONE,delta*6)
+		
+
 
 func switch_check(active : bool) -> void:
 	touched = active
 	if active:
 		jewel_mesh.get_surface_override_material(0).albedo_color = activated_color
+		
+
 	else:
 		jewel_mesh.get_surface_override_material(0).albedo_color = original_color
 		jewel_container.position = original_pos
+		
 		
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.has_method("reached_checkpoint"):
 		body.reached_checkpoint(global_position)
+		Audio.play ("res://sounds/zapsplat_multimedia_game_sound_put_down_object_metal_clink_delicate_109653.mp3")
+
 		var all_cps : Array[Node] = get_tree().get_nodes_in_group("Checkpoint")
 		for check in all_cps:
 			if check != self:
